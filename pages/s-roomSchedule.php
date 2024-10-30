@@ -105,13 +105,13 @@ function getRoomsByBuilding($conn, $building)
             <div class="m-4 w-100">
                 <ul class="nav nav-tabs" id="buildingTabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active fs-3" id="building-a-tab" data-toggle="tab" href="#building-a" role="tab" aria-controls="building-a" aria-selected="true">Building A</a>
+                        <a class="nav-link active fs-3 text-dark" id="building-a-tab" data-toggle="tab" href="#building-a" role="tab" aria-controls="building-a" aria-selected="true">Building A</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3" id="building-b-tab" data-toggle="tab" href="#building-b" role="tab" aria-controls="building-b" aria-selected="false">Building B</a>
+                        <a class="nav-link fs-3 text-dark" id="building-b-tab" data-toggle="tab" href="#building-b" role="tab" aria-controls="building-b" aria-selected="false">Building B</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3" id="building-c-tab" data-toggle="tab" href="#building-c" role="tab" aria-controls="building-c" aria-selected="false">Building C</a>
+                        <a class="nav-link fs-3 text-dark" id="building-c-tab" data-toggle="tab" href="#building-c" role="tab" aria-controls="building-c" aria-selected="false">Building C</a>
                     </li>
                 </ul>
 
