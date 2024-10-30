@@ -1,0 +1,107 @@
+Array
+(
+    [0] => Array
+        (
+            [id] => 28
+            [title] => repairs
+            [start] => 2024-10-23
+            [extendedProps] => Array
+                (
+                    [room_code] => A101
+                    [maintenance_status] => COMPLETED
+                )
+
+        )
+
+    [1] => Array
+        (
+            [id] => 30
+            [title] => WIFI
+            [start] => 2024-10-22
+            [extendedProps] => Array
+                (
+                    [room_code] => A102
+                    [maintenance_status] => COMPLETED
+                )
+
+        )
+
+    [2] => Array
+        (
+            [id] => 31
+            [title] => DEMOLITIONS
+            [start] => 2024-10-22
+            [extendedProps] => Array
+                (
+                    [room_code] => A102
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [3] => Array
+        (
+            [id] => 32
+            [title] => REPAIRS
+            [start] => 2024-10-25
+            [extendedProps] => Array
+                (
+                    [room_code] => A101
+                    [maintenance_status] => COMPLETED
+                )
+
+        )
+
+    [4] => Array
+        (
+            [id] => 33
+            [title] => REPAIRS
+            [start] => 2024-10-24
+            [extendedProps] => Array
+                (
+                    [room_code] => A102
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [5] => Array
+        (
+            [id] => 34
+            [title] => DEMOLITION
+            [start] => 2024-10-26
+            [extendedProps] => Array
+                (
+                    [room_code] => A101
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [6] => Array
+        (
+            [id] => 35
+            [title] => SHABU
+            [start] => 2024-10-28
+            [extendedProps] => Array
+                (
+                    [room_code] => C104
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [7] => Array
+        (
+            [id] => 37
+            [title] => LOG1
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => A101
+                    [maintenance_status] => COMPLETED
+                )
+
+        )
+
+)

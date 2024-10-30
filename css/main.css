@@ -1,0 +1,884 @@
+* {
+  font-family: Inter;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  transition: all 200ms ease;
+  width: 0;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transform: scaleX(1);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #23b0ef;
+  color: #fff;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+#headerTitle {
+  display: flex;
+  align-items: center;
+}
+
+#NTC-logo {
+  margin: 5px;
+}
+
+#loginBody {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#loginBg {
+  width: 60%;
+  height: 100%;
+}
+
+#loginForm {
+  width: 300px;
+  align-items: center;
+  align-content: center;
+  margin: 100px;
+  background-color: #8fa9c4;
+}
+
+#loginForm Form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+#loginForm > form > div {
+  position: relative;
+}
+
+#loginForm #username, #loginForm #password {
+  border: solid #8CDEEA 1px;
+}
+
+#loginForm #togglePassword {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  bottom: 20%;
+  z-index: 3;
+}
+
+#loginForm Form div > #password {
+  width: 100%;
+}
+
+#loginForm Form .button {
+  margin: 30px;
+  border: none;
+  background-color: #23b0ef;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#headerTitle > h1 {
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.2), -1px 0 3px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.2), 0 -1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#logout-btn {
+  background: none;
+  color: #fff;
+  font-size: x-large;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 7px;
+  transition: all 1s ease;
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.2), -1px 0 3px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.2), 0 -1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#logout-btn:hover {
+  box-shadow: 0 0 3px 2px #000;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main-container {
+  display: flex;
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  border: 7px solid #7395bb;
+  padding: 10px;
+  background-image: url("../images/sidebar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+nav ul li div {
+  display: flex;
+  margin: 0 10px 0 0;
+}
+
+nav ul li div div:hover {
+  cursor: default;
+}
+
+.nav-bullet {
+  width: 18px;
+  height: 20px;
+  background: #333;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+.mainDashboard {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.mainDashboard div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 253, 253, 0.6000000238418579);
+  border: 3px solid rgba(133, 126, 126, 1);
+  border-radius: 50px;
+  height: inherit !important;
+  padding: 2%;
+}
+
+.mainDashboard h6 {
+  text-align: center;
+}
+
+.mainAboutUs {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+  height: 89.5vh;
+}
+
+.mainAboutUs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aboutUsImg {
+  background-image: url("../images/aboutUss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20rem;
+}
+
+.mainAboutUs p {
+  margin: 0 5%;
+}
+
+.mainAboutUs .teamContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.mainAboutUs .teamContainer .memberContainer {
+  text-align: center;
+}
+
+.mainRoomSchedule {
+  display: flex;
+  flex: 1;
+}
+
+.mainRoomSchedule .buildingTabs {
+  display: flex;
+  flex: 1;
+  background-color: #0DB2F8;
+}
+
+.mainUserManager {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 14px;
+  border: 9px solid #000;
+  background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+  border-radius: 40px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.mainUserManager .containerUserManager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainUserManager .containerUserManager .separator {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#h6-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#searchForm {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+#searchResults {
+  position: absolute;
+  top: 35px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  width: calc(100% - 2px);
+}
+
+#searchTerm {
+  width: 100%;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: large;
+}
+
+#searchResults div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#searchResults div:hover {
+  background-color: #f0f0f0;
+}
+
+.separator {
+  padding-top: 5px;
+}
+
+.separator .form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.separator .form #userForm {
+  font-size: small !important;
+}
+
+.separator .logs > div {
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.logs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logs > div {
+  padding: 20px;
+  border: 4px solid #000;
+  border-radius: 30px;
+  background: #5c799b;
+}
+
+.logs h6 {
+  text-align: center;
+  border: 3px solid #000;
+  background-color: #fff;
+  width: 70%;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.form-group input:focus {
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.3s;
+  padding: 0 5px;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -15px;
+  font-size: small;
+  border: 0px solid;
+  border-radius: 5px 5px 0 0;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.form-separator .separate {
+  display: flex;
+  flex-direction: column;
+  width: 58%;
+  justify-content: end;
+}
+
+.form-separator .separate:nth-child(1) {
+  width: 40%;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-separator .separate select {
+  width: 100%;
+  padding: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+#userForm {
+  padding: 30px;
+  border: 4px solid #000;
+  border-radius: 30px;
+  background: #5c799b;
+}
+
+.form .submit-buttons div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .submit-buttons div:nth-child(1) {
+  justify-content: end;
+}
+
+.form .submit-buttons button {
+  width: 9.5vw;
+  margin: 0 10px;
+  padding: 10px 0;
+  border: 4px solid #000;
+  border-radius: 20px;
+}
+
+.form .submit-buttons div:nth-child(1) button {
+  background-color: #38ed5b;
+}
+
+.form .submit-buttons button:nth-child(1) {
+  background-color: #f80d29;
+}
+
+.form .submit-buttons button:nth-child(2) {
+  background-color: #0db2f8;
+}
+
+.form .submit-buttons button:nth-child(3) {
+  background-color: #f8e00d;
+}
+
+.form h6 {
+  text-align: center;
+  border: 3px solid #000;
+  background-color: #fff;
+  width: 70%;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.design {
+  background-color: #9d9d9d;
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 20%;
+  height: 10px;
+}
+
+.form span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.separate img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 10vw;
+}
+
+.mainRoomManager {
+  display: flex;
+  flex: 1;
+  margin: 15px;
+  padding: 10px;
+  background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+  border-radius: 40px;
+}
+
+.mainRoomManager .containerRoomManager {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+  border-radius: 40px;
+  padding: 20px;
+  flex: 1;
+}
+
+.rm-header {
+  background-color: #47AEDA !important;
+  border: 3px solid black;
+  border-radius: 20px !important;
+  margin: 10px;
+}
+
+.rm-header > h3 {
+  margin: 0;
+}
+
+.rm-card {
+  background-color: #AEAEAE;
+  border: 3px solid black;
+  border-radius: 30px !important;
+}
+
+#main-container > main > div > div > div > div.col-md-7 > div > div.card-body > table > tbody > td{
+  border-collapse: collapse;
+  border: none !important;
+}
+
+.right-section {
+  width: 25%;
+}
+
+.left-section {
+  width: 55%;
+  padding: 0 30px;
+}
+
+.left-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.left-section th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.left-section th {
+  background-color: #f2f2f2;
+}
+
+.left-section form {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.av-room {
+  border-radius: 20px;
+}
+
+.av-stat {
+  position: relative;
+}
+
+.av-check {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+}
+
+.room-grid .room {
+  min-width: 8em; /* Adjust based on your design */
+  height: fit-content; /* Fixed height */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 15px;
+}
+
+.mainRoomSelector {
+  display: flex;
+  flex: 1;
+  margin: 15px;
+  padding: 10px;
+  background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+  border-radius: 40px;
+}
+
+.rs-card {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.rs-head {
+  background-color: #5f5b5b;
+}
+
+.mainScheduleManager {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  padding: 30px;
+  background: #5ec2f4;
+  overflow-y: auto;
+}
+
+.mainScheduleManager #big-calendar {
+  width: 70%;
+}
+
+.mainScheduleManager .left-schedule {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 10px;
+}
+
+.left-schedule #small-calendar {
+  height: fit-content;
+  padding: 10px;
+}
+
+#addEventModal #addEventForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#available-rooms {
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+  padding-right: 0.5em;
+}
+
+#available-rooms .form-check {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.mainMaintenance {
+    display: flex;
+    flex: 1;
+    margin: 15px;
+    padding: 10px;
+    background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+    border-radius: 40px;
+}
+
+.mt-div {
+  position: relative;
+}
+
+.mt-cont h5 {
+  text-align: center;
+  border: 3px solid #000;
+  background: #fff;
+  padding: 5px;
+  border-radius: 30px;
+  width: 75%;
+}
+
+.mt-cont {
+  background-color: #0DB2F8;
+  border: 3px solid black;
+  border-radius: 30px !important;
+  padding: 20px;
+}
+
+#notificationButton {
+  position: absolute;
+}
+
+.mainConflict {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 14px;
+  border: 9px solid #000;
+  background: linear-gradient(rgba(82, 77, 77, 1), rgba(184, 172, 172, 1));
+  border-radius: 40px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.cf-cont {
+  padding: 20px;
+  border: 4px solid #000;
+  border-radius: 30px;
+  background: #5c799b;
+}
+
+.cf-cont h4 {
+  text-align: center;
+  border: 3px solid #000;
+  background: #fff;
+  padding: 5px;
+  border-radius: 30px;
+  width: 75%;
+}
+
+.mainReport {
+  background-color: #EDEDED;
+}
+
+.report-tab {
+  background-color: #FFF4F4;
+}
+
+#tabs {
+  border-bottom: 10px solid #fff ;
+}
+
+@media screen and (max-width: 768px) {
+  .mainUserManager .containerUserManager .separator {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainUserManager .containerUserManager .separator .form {
+    width: 100%;
+  }
+  .mainScheduleManager {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .mainScheduleManager .left-schedule {
+    width: 100%;
+  }
+
+  nav {
+    display: none; /* Hide the nav by default on small screens */
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    z-index: 998;
+  }
+
+  #nav-toggle-btn {
+    display: block !important; /* Show the toggle button */
+  }
+
+  #loginBody {
+    flex-direction: column;
+  }
+
+  .form-separator {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .form-separator .separate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-group {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .separate img {
+    display: none;
+  }
+
+  .form-separator .separate:nth-child(1) {
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-separator .separate:nth-child(1) > br {
+    display: none;
+  }
+
+  .form-separator .separate:nth-child(1) > select {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .form .submit-buttons {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .form .submit-buttons div {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .form .submit-buttons div:nth-child(1) {
+    justify-content: center;
+  }
+
+  .form .submit-buttons button {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    border: 4px solid #000;
+    border-radius: 20px;
+  }
+
+  .mainDashboard div {
+    margin-bottom: 2rem;
+  }
+
+  .separator .form {
+    align-items: unset;
+  }
+
+  .form h6 {
+    text-align: center;
+  }
+
+  .mainScheduleManager #big-calendar {
+    width: 100%;
+  }
+
+  #headerTitle > h1 {
+    font-size: large;
+  }
+
+  #loginBg {
+    width: 100%;
+  }
+
+  #aboutUsImg {
+    height: 10rem;
+  }
+
+  .separator .logs {
+    margin-top: 10px;
+  }
+}
+
+/* Default button styling */
+#nav-toggle-btn {
+  display: none; /* Hidden by default */
+  background: none; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  z-index: 999;
+}
+
+#nav-toggle-btn:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Show navigation when active */
+nav.active {
+  display: block; /* Show navigation when active */
+}
