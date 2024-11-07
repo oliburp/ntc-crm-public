@@ -7,7 +7,8 @@ function fetchConflictingRooms()
     global $conn;
     $sql = "SELECT 
                 r.room_id,
-                r.room_code, 
+                r.room_code,
+                u.username,
                 DATE_FORMAT(m.maintenance_date, '%m/%d/%Y') AS conflict_date,
                 CONCAT(
                     UPPER(SUBSTRING(m.label, 1, 1)),
@@ -24,6 +25,8 @@ function fetchConflictingRooms()
                 room_maintenance m ON s.room_id = m.room_id 
             JOIN 
                 rooms r ON s.room_id = r.room_id
+            JOIN
+                users u ON s.room_id = u.user_id
             WHERE 
                 DATE(s.start_time) = m.maintenance_date 
                 AND m.maintenance_status = 'PENDING'";
@@ -147,6 +150,12 @@ $scheduledRooms = fetchSchedules();
     .cf-th {
         background-color: #f0d2d0;
     }
+
+    @media screen and (max-width: 768px) {
+        tr>td:nth-child(2) {
+        width: 30% !important;
+    }
+    }
 </style>
 
 <script>
@@ -256,7 +265,7 @@ $scheduledRooms = fetchSchedules();
                 <?php foreach ($conflictingRooms as $conflict): ?>
                     <li class="list-group-item">
                         <?php
-                        echo "Room " . $conflict['room_code'] . " - " . $conflict['conflict_date'] . ", " . $conflict['new_label'] . " and " . $conflict['new_subject'] . " - " . $conflict['course_year'];
+                        echo "Room " . $conflict['room_code'] . " - " . $conflict['conflict_date'] . ", " . $conflict['new_label'] . " and " . $conflict['new_subject'] . " - " . $conflict['course_year'] . " (" . $conflict['username'] . ") ";
                         ?>
                     </li>
                 <?php endforeach; ?>

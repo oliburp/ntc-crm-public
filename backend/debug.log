@@ -28,19 +28,6 @@ Array
 
     [2] => Array
         (
-            [id] => 31
-            [title] => DEMOLITIONS
-            [start] => 2024-10-22
-            [extendedProps] => Array
-                (
-                    [room_code] => A102
-                    [maintenance_status] => PENDING
-                )
-
-        )
-
-    [3] => Array
-        (
             [id] => 32
             [title] => REPAIRS
             [start] => 2024-10-25
@@ -52,7 +39,7 @@ Array
 
         )
 
-    [4] => Array
+    [3] => Array
         (
             [id] => 33
             [title] => REPAIRS
@@ -65,20 +52,7 @@ Array
 
         )
 
-    [5] => Array
-        (
-            [id] => 34
-            [title] => DEMOLITION
-            [start] => 2024-10-26
-            [extendedProps] => Array
-                (
-                    [room_code] => A101
-                    [maintenance_status] => PENDING
-                )
-
-        )
-
-    [6] => Array
+    [4] => Array
         (
             [id] => 35
             [title] => SHABU
@@ -86,12 +60,12 @@ Array
             [extendedProps] => Array
                 (
                     [room_code] => C104
-                    [maintenance_status] => PENDING
+                    [maintenance_status] => COMPLETED
                 )
 
         )
 
-    [7] => Array
+    [5] => Array
         (
             [id] => 37
             [title] => LOG1
@@ -100,6 +74,71 @@ Array
                 (
                     [room_code] => A101
                     [maintenance_status] => COMPLETED
+                )
+
+        )
+
+    [6] => Array
+        (
+            [id] => 40
+            [title] => EMAIL
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => C302
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [7] => Array
+        (
+            [id] => 41
+            [title] => EMAIL
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => A104
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [8] => Array
+        (
+            [id] => 42
+            [title] => REPAIRS
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => C104
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [9] => Array
+        (
+            [id] => 43
+            [title] => DEMOLITIONS
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => B102
+                    [maintenance_status] => PENDING
+                )
+
+        )
+
+    [10] => Array
+        (
+            [id] => 44
+            [title] => SHABU
+            [start] => 2024-10-30
+            [extendedProps] => Array
+                (
+                    [room_code] => B101
+                    [maintenance_status] => PENDING
                 )
 
         )

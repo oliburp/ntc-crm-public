@@ -762,6 +762,10 @@ td {
   #nav-toggle-btn {
     display: block !important; /* Show the toggle button */
   }
+  
+  .room-grid {
+    grid-template-columns: auto auto;
+  }
 
   #loginBody {
     flex-direction: column;

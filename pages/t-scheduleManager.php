@@ -449,9 +449,9 @@ $rooms = fetchRooms();
                             <label for="edit-end-time">End Time:</label>
                             <input type="datetime-local" id="edit-end-time" name="end_time" class="form-control" required>
                             <br>
-                            <div><label for="edit-repeat-weekly">Repeat Weekly</label>
+                            <!-- <div><label for="edit-repeat-weekly">Repeat Weekly</label>
                                 <input type="checkbox" id="edit-repeat-weekly" name="edit_repeat_weekly">
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="modal-footer">

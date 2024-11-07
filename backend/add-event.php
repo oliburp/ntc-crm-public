@@ -19,11 +19,15 @@ $repeat_weekly = $_POST['repeat_weekly'];
 
 // Check for conflicting schedules
 $sql_conflict = "SELECT * FROM schedules WHERE room_id = ? AND (
-    (start_time < ? AND end_time > ?) OR 
-    (start_time < ? AND end_time > ?)
+    (start_time <= ? AND end_time > ?) OR 
+    (start_time < ? AND end_time >= ?)
 )";
 $stmt_conflict = $conn->prepare($sql_conflict);
-$stmt_conflict->bind_param("issss", $room_id, $start_time, $start_time, $end_time, $end_time);
+
+$adjusted_end_time = strtotime($end_time) - 60;
+$adjusted_end_time = date('Y-m-d H:i:s', $adjusted_end_time);
+
+$stmt_conflict->bind_param("issss", $room_id, $start_time, $end_time, $end_time, $adjusted_end_time);
 $stmt_conflict->execute();
 $result_conflict = $stmt_conflict->get_result();
 
